@@ -1,0 +1,122 @@
+<!doctype html><html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title></head><body>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+    html {height: 100%;}
+
+    body { margin: 0; font-family: "Roboto", sans-serif; display: flex; align-items: center;justify-content: center; height: 100%;}
+
+    .controlButton {
+        border-radius: 10px;
+        border: none;
+        background: blue;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        outline: none;
+        transition: .3s ease-in-out;
+    }
+
+    .controlButton:hover {
+        transition: .3s ease-in-out;
+        opacity: 0.8;
+    }
+
+    .startButton {
+        background: #24ec70;
+    }
+
+    .stopButton {
+        background: #ec243b;
+    }
+
+    .controlButton svg {
+        width: 60px;
+        fill: white;
+    }
+
+    .controlButton path {
+        fill: white;
+    }
+
+    .buttonsDiv {
+        display: flex;
+        gap: 15px;
+    }
+
+    .buttonsDiv > div button:nth-of-type(1) {
+        margin-bottom: 15px;
+    }
+
+    .buttonsDivTitle {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .buttonsDivTitle2 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 5px;
+    }
+
+    .dataBox{
+        height: calc(200px / 3);
+        max-height: 100px;
+        width: 200px;
+        border-radius: 10px;
+        border: none;
+        background: #e1e1e1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px ;
+    }
+    .dataBox:first-child{
+        margin-top: 22px;
+    }
+    .dataBox:nth-of-type(2){
+        margin: 7.5px 0;
+    }
+    .dataBoxTitle{
+        font-size: 15px;
+        font-weight: 500;
+        color: black;
+    }
+    .dataBoxValue{
+        font-size: 18px;
+        font-weight: 500;
+        color: black;
+    }
+
+</style>
+
+
+
+
+<div class="buttonsDiv"><div>
+        <div class="buttonsDivTitle">START / STOP </div>
+        <button class="controlButton startButton" type="button"><svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M21.924 5.128c-0.5-0.233-1.095-0.018-1.329 0.482s-0.018 1.095 0.482 1.329c5.073 2.375 7.828 7.873 6.699 13.371-1.341 6.527-7.739 10.744-14.268 9.407-3.162-0.649-5.756-2.491-7.533-5.186s-2.398-5.922-1.748-9.084c0.772-3.757 3.207-6.854 6.68-8.497 0.499-0.236 0.713-0.832 0.476-1.332-0.236-0.498-0.831-0.71-1.331-0.476-4.047 1.915-6.884 5.523-7.784 9.902-0.757 3.686-0.033 7.445 2.037 10.587 2.071 3.14 5.115 5.287 8.801 6.044 0.951 0.195 1.9 0.289 2.836 0.289 6.546 0 12.427-4.598 13.793-11.254 1.316-6.407-1.895-12.816-7.81-15.585zM16 13c0.552 0 1-0.448 1-1v-11c0-0.552-0.448-1-1-1s-1 0.448-1 1v11c0 0.552 0.448 1 1 1z"></path> </svg></button>
+        <button class="controlButton stopButton" type="button"><svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M21.924 5.128c-0.5-0.233-1.095-0.018-1.329 0.482s-0.018 1.095 0.482 1.329c5.073 2.375 7.828 7.873 6.699 13.371-1.341 6.527-7.739 10.744-14.268 9.407-3.162-0.649-5.756-2.491-7.533-5.186s-2.398-5.922-1.748-9.084c0.772-3.757 3.207-6.854 6.68-8.497 0.499-0.236 0.713-0.832 0.476-1.332-0.236-0.498-0.831-0.71-1.331-0.476-4.047 1.915-6.884 5.523-7.784 9.902-0.757 3.686-0.033 7.445 2.037 10.587 2.071 3.14 5.115 5.287 8.801 6.044 0.951 0.195 1.9 0.289 2.836 0.289 6.546 0 12.427-4.598 13.793-11.254 1.316-6.407-1.895-12.816-7.81-15.585zM16 13c0.552 0 1-0.448 1-1v-11c0-0.552-0.448-1-1-1s-1 0.448-1 1v11c0 0.552 0.448 1 1 1z"></path></svg> </button>
+    </div><div>
+        <div class="buttonsDivTitle">DUTY</div>
+        <button class="controlButton" type="button"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4569 9.73276C6.17123 10.0327 6.18281 10.5074 6.48276 10.7931C6.78271 11.0788 7.25744 11.0672 7.5431 10.7672L6.4569 9.73276ZM12.5431 5.51724C12.8288 5.21729 12.8172 4.74256 12.5172 4.4569C12.2173 4.17123 11.7426 4.18281 11.4569 4.48276L12.5431 5.51724ZM12.5431 4.48276C12.2574 4.18281 11.7827 4.17123 11.4828 4.4569C11.1828 4.74256 11.1712 5.21729 11.4569 5.51724L12.5431 4.48276ZM16.4569 10.7672C16.7426 11.0672 17.2173 11.0788 17.5172 10.7931C17.8172 10.5074 17.8288 10.0327 17.5431 9.73276L16.4569 10.7672ZM12.75 5C12.75 4.58579 12.4142 4.25 12 4.25C11.5858 4.25 11.25 4.58579 11.25 5H12.75ZM11.25 19C11.25 19.4142 11.5858 19.75 12 19.75C12.4142 19.75 12.75 19.4142 12.75 19H11.25ZM7.5431 10.7672L12.5431 5.51724L11.4569 4.48276L6.4569 9.73276L7.5431 10.7672ZM11.4569 5.51724L16.4569 10.7672L17.5431 9.73276L12.5431 4.48276L11.4569 5.51724ZM11.25 5V19H12.75V5H11.25Z" fill="#000000"/></svg></button>
+        <button class="controlButton" type="button"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)"><path d="M6.4569 9.73276C6.17123 10.0327 6.18281 10.5074 6.48276 10.7931C6.78271 11.0788 7.25744 11.0672 7.5431 10.7672L6.4569 9.73276ZM12.5431 5.51724C12.8288 5.21729 12.8172 4.74256 12.5172 4.4569C12.2173 4.17123 11.7426 4.18281 11.4569 4.48276L12.5431 5.51724ZM12.5431 4.48276C12.2574 4.18281 11.7827 4.17123 11.4828 4.4569C11.1828 4.74256 11.1712 5.21729 11.4569 5.51724L12.5431 4.48276ZM16.4569 10.7672C16.7426 11.0672 17.2173 11.0788 17.5172 10.7931C17.8172 10.5074 17.8288 10.0327 17.5431 9.73276L16.4569 10.7672ZM12.75 5C12.75 4.58579 12.4142 4.25 12 4.25C11.5858 4.25 11.25 4.58579 11.25 5H12.75ZM11.25 19C11.25 19.4142 11.5858 19.75 12 19.75C12.4142 19.75 12.75 19.4142 12.75 19H11.25ZM7.5431 10.7672L12.5431 5.51724L11.4569 4.48276L6.4569 9.73276L7.5431 10.7672ZM11.4569 5.51724L16.4569 10.7672L17.5431 9.73276L12.5431 4.48276L11.4569 5.51724ZM11.25 5V19H12.75V5H11.25Z" fill="#000000"></path> </svg> </button>
+        <div class="buttonsDivTitle2"> 0.02 </div>
+    </div><div>
+        <div class="buttonsDivTitle">BEKLEME</div>
+        <button class="controlButton" type="button"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4569 9.73276C6.17123 10.0327 6.18281 10.5074 6.48276 10.7931C6.78271 11.0788 7.25744 11.0672 7.5431 10.7672L6.4569 9.73276ZM12.5431 5.51724C12.8288 5.21729 12.8172 4.74256 12.5172 4.4569C12.2173 4.17123 11.7426 4.18281 11.4569 4.48276L12.5431 5.51724ZM12.5431 4.48276C12.2574 4.18281 11.7827 4.17123 11.4828 4.4569C11.1828 4.74256 11.1712 5.21729 11.4569 5.51724L12.5431 4.48276ZM16.4569 10.7672C16.7426 11.0672 17.2173 11.0788 17.5172 10.7931C17.8172 10.5074 17.8288 10.0327 17.5431 9.73276L16.4569 10.7672ZM12.75 5C12.75 4.58579 12.4142 4.25 12 4.25C11.5858 4.25 11.25 4.58579 11.25 5H12.75ZM11.25 19C11.25 19.4142 11.5858 19.75 12 19.75C12.4142 19.75 12.75 19.4142 12.75 19H11.25ZM7.5431 10.7672L12.5431 5.51724L11.4569 4.48276L6.4569 9.73276L7.5431 10.7672ZM11.4569 5.51724L16.4569 10.7672L17.5431 9.73276L12.5431 4.48276L11.4569 5.51724ZM11.25 5V19H12.75V5H11.25Z" fill="#000000"/></svg> </button>
+        <button class="controlButton" type="button"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)"><path d="M6.4569 9.73276C6.17123 10.0327 6.18281 10.5074 6.48276 10.7931C6.78271 11.0788 7.25744 11.0672 7.5431 10.7672L6.4569 9.73276ZM12.5431 5.51724C12.8288 5.21729 12.8172 4.74256 12.5172 4.4569C12.2173 4.17123 11.7426 4.18281 11.4569 4.48276L12.5431 5.51724ZM12.5431 4.48276C12.2574 4.18281 11.7827 4.17123 11.4828 4.4569C11.1828 4.74256 11.1712 5.21729 11.4569 5.51724L12.5431 4.48276ZM16.4569 10.7672C16.7426 11.0672 17.2173 11.0788 17.5172 10.7931C17.8172 10.5074 17.8288 10.0327 17.5431 9.73276L16.4569 10.7672ZM12.75 5C12.75 4.58579 12.4142 4.25 12 4.25C11.5858 4.25 11.25 4.58579 11.25 5H12.75ZM11.25 19C11.25 19.4142 11.5858 19.75 12 19.75C12.4142 19.75 12.75 19.4142 12.75 19H11.25ZM7.5431 10.7672L12.5431 5.51724L11.4569 4.48276L6.4569 9.73276L7.5431 10.7672ZM11.4569 5.51724L16.4569 10.7672L17.5431 9.73276L12.5431 4.48276L11.4569 5.51724ZM11.25 5V19H12.75V5H11.25Z" fill="#000000"></path> </svg></button>
+        <div class="buttonsDivTitle2"> 0.02</div> </div>
+    <div class="">
+        <div class="dataBox"><div class="dataBoxTitle">AKIM</div><div class="dataBoxValue" id="akim">0.02</div></div>
+        <div class="dataBox"><div class="dataBoxTitle">SICAKLIK</div><div class="dataBoxValue">0.03</div></div> 
+        <div class="dataBox"><div class="dataBoxTitle">FREKANS</div><div class="dataBoxValue">0.03</div></div>
+    </div></div></body></html>
