@@ -13,6 +13,7 @@ void Baslatma_Fonksiyonlari() // Bootin fonksiyonu
         }
     }
     Kurulum_Modu = true;
+    //sdfsdsfdsaf
     Kurulum_Modu_Fonksiyonu();
 }
 
