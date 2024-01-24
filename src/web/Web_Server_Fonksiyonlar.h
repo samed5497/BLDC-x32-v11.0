@@ -19,10 +19,12 @@ void onWebSocketEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsE
             String receivedMessage = String((char *)data);
             if (receivedMessage == "systempowerOn")
             {
-                system_power = true;
+             digitalWrite(octopower_PIN, HIGH);
+            system_power = true;
             }
             else if (receivedMessage == "systempowerOff")
             {
+                digitalWrite(octopower_PIN, LOW);
                 system_power = false;
             }
         }

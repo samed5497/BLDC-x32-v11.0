@@ -54,10 +54,9 @@ void currentreadfunction()
     }
 }
 
-/*
+
 void buttonreadfunction()
 {
-
     //----------X1---------
     // 1074----açma kapama    1150-1000
     // 1233----duty azalma    1400-1160
@@ -72,6 +71,7 @@ void buttonreadfunction()
     // 2105----duty artma     2200-1950
     // 4095----bekleme azalma 5000-3000
 
+/*
     Buton = analogRead(analog_buton_PIN);
 
     if (Buton > 800 && (millis() - lastDebounceTime) > debounceDelay)
@@ -140,8 +140,9 @@ void buttonreadfunction()
             
         }
     }
+    */
 }
-*/
+
 
 void LCD_report_func()
 {

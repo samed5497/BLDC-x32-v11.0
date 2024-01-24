@@ -21,7 +21,7 @@ extern "C"
 uint8_t temprature_sens_read();
 
 String UYGULAMA = "BLDC DRIVER x32";
-String VERSIYON = "v11.0_beta-by S.KAYA";
+String VERSIYON = "v11.01_beta-by S.KAYA";
 
 int IN_BUTON_0 = 0;
 
