@@ -87,7 +87,7 @@ String generateFirstPageForm()
                           ".content { max-width: 400px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }" +
                           "</style>";
 
-    String FirstPagehtml = "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>" + UYGULAMA + " Wi-Fi Yapılandırma</ title></ head> < body > " +
+    String FirstPagehtml = "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>" + UYGULAMA + " Wi-Fi Yapılandırma</title></head><body > " +
                            FirstPagecss +
                            FirstPageScript +
                            "<div class='content'>" +
