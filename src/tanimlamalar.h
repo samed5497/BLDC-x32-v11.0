@@ -27,24 +27,26 @@ int IN_BUTON_0 = 0;
 
 
 
-#define M_A_HIN_PIN 13
-#define M_A_LIN_PIN 27
-#define M_B_HIN_PIN 26
-#define M_B_LIN_PIN 25
+#define M_A_HIN_PIN 16
+#define M_A_LIN_PIN 17
+#define M_B_HIN_PIN 18
+#define M_B_LIN_PIN 19
 #define M_C_HIN_PIN 33
 #define M_C_LIN_PIN 32
-#define NTC_A_PIN 36 // değişecek
-#define NTC_B_PIN 36
-#define NTC_C_PIN 36
-#define Hall_A_PIN 17
-#define Hall_B_PIN 18
-#define Hall_C_PIN 19
-#define currretsensor_PIN 35
-#define analog_buton_PIN 34
-#define octopower_PIN 23
-#define A_sensor_39_PIN 39
-#define Encoder_A_PIN 15
-#define Encoder_B_PIN 16
+#define NTC_A_PIN 34 // değişecek
+#define NTC_B_PIN 35
+#define NTC_C_PIN 35
+//#define Hall_A_PIN 17
+//#define Hall_B_PIN 18
+//#define Hall_C_PIN 19
+#define currretsensor_PIN 39
+#define currretsensor_voutPIN 36
+
+//#define analog_buton_PIN 34
+#define octopower_PIN 25
+//#define A_sensor_39_PIN 39
+//#define Encoder_A_PIN 15
+//#define Encoder_B_PIN 16
 #define I2C_SDA 21
 #define I2C_SCL 22
 

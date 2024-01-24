@@ -19,14 +19,16 @@ void Baslatma_Fonksiyonlari() // Bootin fonksiyonu
 
 void setup()
 {
-    pinMode(analog_buton_PIN, INPUT);
+    //pinMode(analog_buton_PIN, INPUT);
     pinMode(currretsensor_PIN, INPUT);
-    pinMode(Encoder_A_PIN, INPUT);
-    pinMode(Encoder_B_PIN, INPUT);
-    pinMode(Hall_A_PIN, OUTPUT); // ŞİMDİLİK LEDİ TAKTIK
-    pinMode(Hall_B_PIN, INPUT);
-    pinMode(Hall_C_PIN, INPUT);
-    pinMode(A_sensor_39_PIN, INPUT);
+        pinMode(currretsensor_voutPIN, INPUT);
+
+    //pinMode(Encoder_A_PIN, INPUT);
+    //pinMode(Encoder_B_PIN, INPUT);
+    //pinMode(Hall_A_PIN, OUTPUT); // ŞİMDİLİK LEDİ TAKTIK
+    //pinMode(Hall_B_PIN, INPUT);
+    //pinMode(Hall_C_PIN, INPUT);
+    //pinMode(A_sensor_39_PIN, INPUT);
 
     pinMode(octopower_PIN, OUTPUT);
     /*
@@ -61,7 +63,7 @@ void loop()
     if (Update_Mod != 1)
     {
         temperaturesfunction();
-        buttonreadfunction();
+        //buttonreadfunction();
         currentreadfunction();
         LCD_report_func();
         Surucu_Fonksiyonlari();

@@ -54,6 +54,7 @@ void currentreadfunction()
     }
 }
 
+/*
 void buttonreadfunction()
 {
 
@@ -96,11 +97,11 @@ void buttonreadfunction()
         else if (2500 >= Buton && Buton > 1910)
         {
             duty = duty + duty_artis;
-            /*
+            
             Serial.println();
             Serial.print("[KONTROL] Duty: ");
             Serial.println(duty);
-            */
+            
         }
         else if (1400 >= Buton && Buton > 1160)
         {
@@ -109,11 +110,11 @@ void buttonreadfunction()
             {
                 duty = 0;
             }
-            /*
+            
             Serial.println();
             Serial.print("[KONTROL] Duty: ");
             Serial.println(duty);
-            */
+            
         }
 
         else if (1900 >= Buton && Buton > 1410)
@@ -123,23 +124,24 @@ void buttonreadfunction()
             {
                 bekleme = 0;
             }
-            /*
+            
             Serial.println();
             Serial.print("[KONTROL] Bekleme: ");
             Serial.println(bekleme);
-            */
+            
         }
         else if (5000 >= Buton && Buton > 3000)
         {
             bekleme = bekleme - bekleme_artis;
-            /*
+            
             Serial.println();
             Serial.print("[KONTROL] Bekleme: ");
             Serial.println(bekleme);
-            */
+            
         }
     }
 }
+*/
 
 void LCD_report_func()
 {
