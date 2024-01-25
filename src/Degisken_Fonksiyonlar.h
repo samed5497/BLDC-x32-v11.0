@@ -143,7 +143,6 @@ void buttonreadfunction()
     */
 }
 
-
 void LCD_report_func()
 {
     lcd.setCursor(0, 0);
@@ -194,7 +193,7 @@ void LCD_report_func()
 
 void Surucu_Fonksiyonlari()
 {
-
+/*
     if (Tc_A > 200 or Tc_B > 200 or Tc_C > 200 or Tc_ort > 150)
     {
         system_power = false;
@@ -208,7 +207,7 @@ void Surucu_Fonksiyonlari()
 
         Serial.println("[ALARM]: Sistem Yüksek Isıdan Dolayı Koruma Amaçlı Devre Dışı Bırakıldı!");
     }
-
+*/
     if (system_power == true)
     {
         Adan_Bye();

@@ -115,9 +115,9 @@ String generateResetForm()
                           ".button { padding: 10px 20px; font-size: 18px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }" +
                           "</style>";
 
-    String ResetPagehtml = String("<!DOCTYPE html<html><head><meta charset='UTF-8'><title>" + UYGULAMA + " Fabrika Ayarları</title></head><body>") +
+    String ResetPagehtml = String("<!DOCTYPE html><html><head><meta charset='UTF-8'><title>" + UYGULAMA + " Fabrika Ayarları</title></head><body>") +
+                           ResetPagecss +
                            ResetPageScript +
-                           ResetPagehtml +
                            "<div class='content'>" + "<h1>Wi-Fi ayarları sıfırlandı!</h1>" +
                            "<p>Değişiklikler cihazı yeniden başlattığınızda devreye alınacaktır. Yeniden başlatana kadar mevcut sistem çalışmaya devam edecektir. </p>" +
                            "<p>Cihaz yeniden başlatıldığında <strong><em>" + ssid_AP + "</strong></em> ismiyle Wifi paylaşımına başlayacaktır. </p><br></div>" +

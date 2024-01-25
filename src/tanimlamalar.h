@@ -21,7 +21,7 @@ extern "C"
 uint8_t temprature_sens_read();
 
 String UYGULAMA = "BLDC DRIVER x32";
-String VERSIYON = "v11.01_beta-by S.KAYA";
+String VERSIYON = "v11.03_beta-by S.KAYA";
 
 int IN_BUTON_0 = 0;
 
@@ -54,7 +54,7 @@ int IN_BUTON_0 = 0;
 #define M_B_KAN_PIN 2
 #define M_C_KAN_PIN 3
 
-int musade = 500;
+int musade = 200;
 int Motor_resolotion = 8;
 int pin, kanal, Buton;
 int frekans = 10000;

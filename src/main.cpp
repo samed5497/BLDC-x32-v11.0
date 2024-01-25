@@ -13,29 +13,33 @@ void Baslatma_Fonksiyonlari() // Bootin fonksiyonu
         }
     }
     Kurulum_Modu = true;
-    //sdfsdsfdsaf
+    // sdfsdsfdsaf
     Kurulum_Modu_Fonksiyonu();
 }
 
 void setup()
 {
-    //pinMode(analog_buton_PIN, INPUT);
+    // pinMode(analog_buton_PIN, INPUT);
     pinMode(currretsensor_PIN, INPUT);
-        pinMode(currretsensor_voutPIN, INPUT);
+    pinMode(currretsensor_voutPIN, INPUT);
 
-    //pinMode(Encoder_A_PIN, INPUT);
-    //pinMode(Encoder_B_PIN, INPUT);
-    //pinMode(Hall_A_PIN, OUTPUT); // ŞİMDİLİK LEDİ TAKTIK
-    //pinMode(Hall_B_PIN, INPUT);
-    //pinMode(Hall_C_PIN, INPUT);
-    //pinMode(A_sensor_39_PIN, INPUT);
+    // pinMode(Encoder_A_PIN, INPUT);
+    // pinMode(Encoder_B_PIN, INPUT);
+    // pinMode(Hall_A_PIN, OUTPUT); // ŞİMDİLİK LEDİ TAKTIK
+    // pinMode(Hall_B_PIN, INPUT);
+    // pinMode(Hall_C_PIN, INPUT);
+    // pinMode(A_sensor_39_PIN, INPUT);
 
     pinMode(octopower_PIN, OUTPUT);
     /*
+    pinMode(M_A_HIN_PIN, OUTPUT);
+    pinMode(M_B_HIN_PIN, OUTPUT);
+    pinMode(M_C_HIN_PIN, OUTPUT);
+*/
     pinMode(M_A_LIN_PIN, OUTPUT);
     pinMode(M_B_LIN_PIN, OUTPUT);
     pinMode(M_C_LIN_PIN, OUTPUT);
-*/
+
     lcd.init(I2C_SDA, I2C_SCL);
     lcd.backlight();
 
@@ -63,9 +67,9 @@ void loop()
     if (Update_Mod != 1)
     {
         temperaturesfunction();
-        buttonreadfunction();
+        // buttonreadfunction();
         currentreadfunction();
-        LCD_report_func();
+        // LCD_report_func();
         Surucu_Fonksiyonlari();
         Zaman_Guncellemesi();
         Seriport_Rapor();

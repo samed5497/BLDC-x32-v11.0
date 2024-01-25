@@ -265,10 +265,9 @@ void temperaturesfunction()
 
 void Adan_Bye()
 {
-
-
     Motor_STOP(M_A_KAN_PIN);
     digitalWrite(M_A_LIN_PIN, LOW);
+    Serial.println("Adan_Bye");
 
     Motor_STOP(M_B_KAN_PIN);
     digitalWrite(M_B_LIN_PIN, LOW);
@@ -287,8 +286,6 @@ void Adan_Bye()
 
 void Adan_Cye()
 {
-
-
     Motor_STOP(M_A_KAN_PIN);
     digitalWrite(M_A_LIN_PIN, LOW);
 
