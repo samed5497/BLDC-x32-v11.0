@@ -28,6 +28,9 @@ void Seriport_Rapor() // sure = ms
         Serial.print(" ~ Akım               = ");
         Serial.print(current_sensor_value);
         Serial.println(" mA");
+        Serial.print(" ~ Akım Vout          = ");
+        Serial.print(current_sensor_value_vout);
+        Serial.println(" mA");
 
         Serial.print(" ~ Bağlı Wi-Fi Ağı    = ");
         Serial.println(ssid_STA);
@@ -49,6 +52,7 @@ void currentreadfunction()
     if (millis() - currentPreviousMillis >= sensorrefleshtime)
     {
         current_sensor_value = analogRead(currretsensor_PIN);
+        current_sensor_value_vout = analogRead(currretsensor_voutPIN);
 
         currentPreviousMillis = millis();
     }

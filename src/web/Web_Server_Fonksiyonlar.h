@@ -227,7 +227,7 @@ String generateMainPageForm()
                             "   setInterval(updateBekleme, 500);" +
 
                             "function updateCurrent() {" +
-                            "   fetch('/getCurrent').then(response => response.text()).then(data => {document.getElementById('syscurrent').innerText = data + ' Mah';}).catch(error => {console.error('Hata:', error);});}" +
+                            "   fetch('/getCurrent').then(response => response.text()).then(data => {document.getElementById('syscurrent').innerText = data;}).catch(error => {console.error('Hata:', error);});}" +
                             "   setInterval(updateCurrent, 500);" +
 
                             "function updateTemp() {" +

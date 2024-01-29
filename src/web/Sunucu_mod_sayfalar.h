@@ -21,7 +21,7 @@ void Sunucu_mod_sayfalar()
               { request->send(200, "text/plain", String(bekleme)); });
 
     server.on("/getCurrent", HTTP_GET, [](AsyncWebServerRequest *request)
-              { request->send(200, "text/plain", String(current_sensor_value)); });
+              { request->send(200, "text/plain", String(current_sensor_value)+ " / Vout: " + String(current_sensor_value_vout)); });
 
     server.on("/getTemp", HTTP_GET, [](AsyncWebServerRequest *request)
               { request->send(200, "text/plain", String(int(Tc_ort))); });

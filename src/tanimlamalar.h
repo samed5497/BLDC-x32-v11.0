@@ -60,10 +60,10 @@ int pin, kanal, Buton;
 int frekans = 10000;
 float duty = 10;
 float duty_artis = 2;
-unsigned int bekleme = 20000;
-unsigned int bekleme_artis = 500;
+unsigned int bekleme = 50000;
+unsigned int bekleme_artis = 1000;
 
-int DONGU, current_sensor_value = 0;
+int DONGU, current_sensor_value,current_sensor_value_vout = 0;
 bool system_power = false;
 unsigned long previousMillis, ekranPreviousMillis, tempPreviousMillis, currentPreviousMillis, currentMillis, motortime, lastDebounceTime = 0;
 unsigned long debounceDelay = 10;
