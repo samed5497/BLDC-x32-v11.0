@@ -59,9 +59,9 @@ int Motor_resolotion = 8;
 int pin, kanal, Buton;
 int frekans = 10000;
 float duty = 10;
-float duty_artis = 0.2;
+float duty_artis = 2;
 unsigned int bekleme = 20000;
-unsigned int bekleme_artis = 50;
+unsigned int bekleme_artis = 500;
 
 int DONGU, current_sensor_value = 0;
 bool system_power = false;
