@@ -261,20 +261,10 @@ void temperaturesfunction()
     }
 }
 
-
-
 void Adan_Bye()
 {
-    Motor_STOP(M_A_KAN_PIN);
-    digitalWrite(M_A_LIN_PIN, LOW);
-
-    Motor_STOP(M_B_KAN_PIN);
-    digitalWrite(M_B_LIN_PIN, LOW);
-
     Motor_STOP(M_C_KAN_PIN);
     digitalWrite(M_C_LIN_PIN, LOW);
-
-    delayMicroseconds(musade);
 
     Motor_PWM(M_A_HIN_PIN, M_A_KAN_PIN, Motor_resolotion, frekans, duty);
     digitalWrite(M_A_LIN_PIN, HIGH);
@@ -285,16 +275,8 @@ void Adan_Bye()
 
 void Adan_Cye()
 {
-    Motor_STOP(M_A_KAN_PIN);
-    digitalWrite(M_A_LIN_PIN, LOW);
-
     Motor_STOP(M_B_KAN_PIN);
     digitalWrite(M_B_LIN_PIN, LOW);
-
-    Motor_STOP(M_C_KAN_PIN);
-    digitalWrite(M_C_LIN_PIN, LOW);
-
-    delayMicroseconds(musade);
 
     Motor_PWM(M_A_HIN_PIN, M_A_KAN_PIN, Motor_resolotion, frekans, duty);
     digitalWrite(M_A_LIN_PIN, HIGH);
@@ -305,18 +287,8 @@ void Adan_Cye()
 
 void Bden_Cye()
 {
-  
-
     Motor_STOP(M_A_KAN_PIN);
     digitalWrite(M_A_LIN_PIN, LOW);
-
-    Motor_STOP(M_B_KAN_PIN);
-    digitalWrite(M_B_LIN_PIN, LOW);
-
-    Motor_STOP(M_C_KAN_PIN);
-    digitalWrite(M_C_LIN_PIN, LOW);
-
-    delayMicroseconds(musade);
 
     Motor_PWM(M_B_HIN_PIN, M_B_KAN_PIN, Motor_resolotion, frekans, duty);
     digitalWrite(M_B_LIN_PIN, HIGH);
@@ -327,18 +299,8 @@ void Bden_Cye()
 
 void Bden_Aya()
 {
-
-
-    Motor_STOP(M_A_KAN_PIN);
-    digitalWrite(M_A_LIN_PIN, LOW);
-
-    Motor_STOP(M_B_KAN_PIN);
-    digitalWrite(M_B_LIN_PIN, LOW);
-
     Motor_STOP(M_C_KAN_PIN);
     digitalWrite(M_C_LIN_PIN, LOW);
-
-    delayMicroseconds(musade);
 
     Motor_PWM(M_B_HIN_PIN, M_B_KAN_PIN, Motor_resolotion, frekans, duty);
     digitalWrite(M_B_LIN_PIN, HIGH);
@@ -349,18 +311,8 @@ void Bden_Aya()
 
 void Cden_Aya()
 {
-
-
-    Motor_STOP(M_A_KAN_PIN);
-    digitalWrite(M_A_LIN_PIN, LOW);
-
     Motor_STOP(M_B_KAN_PIN);
     digitalWrite(M_B_LIN_PIN, LOW);
-
-    Motor_STOP(M_C_KAN_PIN);
-    digitalWrite(M_C_LIN_PIN, LOW);
-
-    delayMicroseconds(musade);
 
     Motor_PWM(M_C_HIN_PIN, M_C_KAN_PIN, Motor_resolotion, frekans, duty);
     digitalWrite(M_C_LIN_PIN, HIGH);
@@ -371,18 +323,8 @@ void Cden_Aya()
 
 void Cden_Bye()
 {
-  
-
     Motor_STOP(M_A_KAN_PIN);
     digitalWrite(M_A_LIN_PIN, LOW);
-
-    Motor_STOP(M_B_KAN_PIN);
-    digitalWrite(M_B_LIN_PIN, LOW);
-
-    Motor_STOP(M_C_KAN_PIN);
-    digitalWrite(M_C_LIN_PIN, LOW);
-
-    delayMicroseconds(musade);
 
     Motor_PWM(M_C_HIN_PIN, M_C_KAN_PIN, Motor_resolotion, frekans, duty);
     digitalWrite(M_C_LIN_PIN, HIGH);

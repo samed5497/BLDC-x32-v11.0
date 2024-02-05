@@ -26,7 +26,8 @@ String VERSIYON = "v11.03_beta-by S.KAYA";
 int IN_BUTON_0 = 0;
 
 
-
+/*
+    //------OTMBL_SRC_V1_PIOUT-------//
 #define M_A_HIN_PIN 16
 #define M_A_LIN_PIN 17
 #define M_B_HIN_PIN 18
@@ -36,17 +37,27 @@ int IN_BUTON_0 = 0;
 #define NTC_A_PIN 34 // değişecek
 #define NTC_B_PIN 35
 #define NTC_C_PIN 35
-//#define Hall_A_PIN 17
-//#define Hall_B_PIN 18
-//#define Hall_C_PIN 19
+#define octopower_PIN 25
+    //------OTMBL_SRC_V1_PIOUT-------//
+*/
+
+        //------LIFT_SRC_V1_PIOUT-------//
+#define M_A_HIN_PIN 32
+#define M_A_LIN_PIN 33
+#define M_B_HIN_PIN 27
+#define M_B_LIN_PIN 13
+#define M_C_HIN_PIN 17
+#define M_C_LIN_PIN 16
+#define NTC_A_PIN 34 // değişecek
+#define NTC_B_PIN 35
+#define NTC_C_PIN 35
+#define octopower_PIN 4
+        //------LIFT_SRC_V1_PIOUT-------//
+
+
 #define currretsensor_PIN 39
 #define currretsensor_voutPIN 36
 
-//#define analog_buton_PIN 34
-#define octopower_PIN 25
-//#define A_sensor_39_PIN 39
-//#define Encoder_A_PIN 15
-//#define Encoder_B_PIN 16
 #define I2C_SDA 21
 #define I2C_SCL 22
 
