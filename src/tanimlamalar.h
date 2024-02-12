@@ -55,8 +55,8 @@ int IN_BUTON_0 = 0;
         //------LIFT_SRC_V1_PIOUT-------//
 
 
-#define currretsensor_PIN 39
-#define currretsensor_voutPIN 36
+#define currretsensor_PIN 36
+//#define currretsensor_voutPIN 36
 
 #define I2C_SDA 21
 #define I2C_SCL 22

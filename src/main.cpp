@@ -21,7 +21,7 @@ void setup()
 {
     // pinMode(analog_buton_PIN, INPUT);
     pinMode(currretsensor_PIN, INPUT);
-    pinMode(currretsensor_voutPIN, INPUT);
+   // pinMode(currretsensor_voutPIN, INPUT);
 
     // pinMode(Encoder_A_PIN, INPUT);
     // pinMode(Encoder_B_PIN, INPUT);
@@ -71,7 +71,7 @@ void loop()
         currentreadfunction();
         // LCD_report_func();
         Surucu_Fonksiyonlari();
-        Zaman_Guncellemesi();
+        Sistem_Saat_Guncelleme();
         Seriport_Rapor();
     }
     if (Kurulum_Modu)

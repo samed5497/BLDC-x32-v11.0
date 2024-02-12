@@ -136,6 +136,7 @@ void Zaman_Guncellemesi()
 
 void Sistem_Saat_Guncelleme()
 {
+    Zaman_Guncellemesi();
     gecensure_sn = lastTime_DONGU / 1000;
     gecensure_dk = lastTime_DONGU / 60000;
     gecensure_saat = lastTime_DONGU / 3600000;
@@ -247,15 +248,15 @@ void temperaturesfunction()
         T_B = 1 / (1 / To + log(Rt_B / Ro) / Beta);
         Tc_B = T_B - 273.15;
         delay(1);
-        olcum_C = analogRead(NTC_C_PIN);
+     /*   olcum_C = analogRead(NTC_C_PIN);
         olcum_C = ADC_LUT[(int)olcum_C];
         Vout_C = olcum_C * Vs / adcMax;
         Rt_C = R1 * Vout_C / (Vs - Vout_C);
         T_C = 1 / (1 / To + log(Rt_C / Ro) / Beta);
         Tc_C = T_C - 273.15;
         delay(1);
-
-        Tc_ort = ((Tc_A + Tc_B + Tc_C) / 3);
+    */
+        Tc_ort = ((Tc_A + Tc_B ) / 2);
 
         tempPreviousMillis = millis();
     }
