@@ -1,0 +1,39 @@
+
+void temperaturesfunction()
+{
+    if (millis() - tempPreviousMillis >= sensorrefleshtime)
+    {
+        olcum_A = analogRead(NTC_A_PIN);
+        olcum_A = ADC_LUT[(int)olcum_A];
+        Vout_A = olcum_A * Vs / adcMax;
+        Rt_A = R1 * Vout_A / (Vs - Vout_A);
+        T_A = 1 / (1 / To + log(Rt_A / Ro) / Beta);
+        Tc_A = T_A - 273.15;
+        delay(1);
+
+        olcum_B = analogRead(NTC_B_PIN);
+        olcum_B = ADC_LUT[(int)olcum_B];
+        Vout_B = olcum_B * Vs / adcMax;
+        Rt_B = R1 * Vout_B / (Vs - Vout_B);
+        T_B = 1 / (1 / To + log(Rt_B / Ro) / Beta);
+        Tc_B = T_B - 273.15;
+        delay(1);
+        olcum_C = analogRead(NTC_C_PIN);
+        olcum_C = ADC_LUT[(int)olcum_C];
+        Vout_C = olcum_C * Vs / adcMax;
+        Rt_C = R1 * Vout_C / (Vs - Vout_C);
+        T_C = 1 / (1 / To + log(Rt_C / Ro) / Beta);
+        Tc_C = T_C - 273.15;
+        delay(1);
+
+        Tc_ort = ((Tc_A + Tc_B + Tc_C) / 3);
+
+        tempPreviousMillis = millis();
+    }
+}
+
+
+ server.on("/getCurrent", HTTP_GET, [](AsyncWebServerRequest *request)
+              { request->send(200, "text/plain", String(current_sensor_value)+ " / Vout: " + String(current_sensor_value_vout)); });
+
+
