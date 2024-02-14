@@ -52,8 +52,6 @@ void currentreadfunction()
     if (millis() - currentPreviousMillis >= sensorrefleshtime)
     {
         current_sensor_value = analogRead(currretsensor_PIN);
-       // current_sensor_value_vout = analogRead(currretsensor_voutPIN);
-
         currentPreviousMillis = millis();
     }
 }
@@ -198,7 +196,7 @@ void LCD_report_func()
 void Surucu_Fonksiyonlari()
 {
 
-    if (Tc_A > 200 or Tc_B > 200 or Tc_C > 200 or Tc_ort > 150)
+    if (Tc_A > 100 or Tc_B > 100  or Tc_ort > 80)
     {
         system_power = false;
 
