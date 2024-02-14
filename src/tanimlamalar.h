@@ -76,6 +76,7 @@ unsigned int bekleme_artis = 10000;
 
 int DONGU, current_sensor_value,current_sensor_value_vout = 0;
 bool system_power = false;
+bool motor_stoped = false;
 unsigned long previousMillis, ekranPreviousMillis, tempPreviousMillis, currentPreviousMillis, currentMillis, motortime, lastDebounceTime = 0;
 unsigned long debounceDelay = 10;
 unsigned long sensorrefleshtime = 100;

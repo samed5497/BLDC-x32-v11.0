@@ -52,6 +52,7 @@ void currentreadfunction()
     if (millis() - currentPreviousMillis >= sensorrefleshtime)
     {
         current_sensor_value = analogRead(currretsensor_PIN);
+        current_sensor_value = (current_sensor_value - 500)/20;
         currentPreviousMillis = millis();
     }
 }
@@ -195,17 +196,18 @@ void LCD_report_func()
 
 void Surucu_Fonksiyonlari()
 {
-
+    // Eğer ısı değerleri riskli seviyeyi aşarsa sistemi kapat
     if (Tc_A > 100 or Tc_B > 100  or Tc_ort > 80)
     {
         system_power = false;
+        motor_stoped = false;
+    }
 
-        Motor_STOP(M_A_KAN_PIN);
-        digitalWrite(M_A_LIN_PIN, LOW);
-        Motor_STOP(M_B_KAN_PIN);
-        digitalWrite(M_B_LIN_PIN, LOW);
-        Motor_STOP(M_C_KAN_PIN);
-        digitalWrite(M_C_LIN_PIN, LOW);
+    // Eğer akım değerleri riskli durumu aşarsa sistemi kapat
+    if ()
+    {
+
+
     }
 
     if (system_power == true)
@@ -222,5 +224,17 @@ void Surucu_Fonksiyonlari()
         delayMicroseconds(bekleme);
         Cden_Bye();
         delayMicroseconds(bekleme);
+        motor_stoped = false;
+    } 
+    else {
+        if (motor_stoped == false) {
+            Motor_STOP(M_A_KAN_PIN);
+            digitalWrite(M_A_LIN_PIN, LOW);
+            Motor_STOP(M_B_KAN_PIN);
+            digitalWrite(M_B_LIN_PIN, LOW);
+            Motor_STOP(M_C_KAN_PIN);
+            digitalWrite(M_C_LIN_PIN, LOW);
+            motor_stoped = true;
+        }
     }
 }
