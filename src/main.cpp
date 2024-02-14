@@ -67,12 +67,13 @@ void loop()
     if (Update_Mod != 1)
     {
         temperaturesfunction();
-        // buttonreadfunction();
         currentreadfunction();
-        // LCD_report_func();
         Surucu_Fonksiyonlari();
-        Sistem_Saat_Guncelleme();
-        Seriport_Rapor();
+        Zaman_Guncellemesi();
+        //Sistem_Saat_Guncelleme();
+        // buttonreadfunction();
+        // LCD_report_func();
+       // Seriport_Rapor();
     }
     if (Kurulum_Modu)
     {

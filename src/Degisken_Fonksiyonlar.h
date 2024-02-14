@@ -197,7 +197,7 @@ void LCD_report_func()
 
 void Surucu_Fonksiyonlari()
 {
-/*
+
     if (Tc_A > 200 or Tc_B > 200 or Tc_C > 200 or Tc_ort > 150)
     {
         system_power = false;
@@ -208,10 +208,8 @@ void Surucu_Fonksiyonlari()
         digitalWrite(M_B_LIN_PIN, LOW);
         Motor_STOP(M_C_KAN_PIN);
         digitalWrite(M_C_LIN_PIN, LOW);
-
-        Serial.println("[ALARM]: Sistem Yüksek Isıdan Dolayı Koruma Amaçlı Devre Dışı Bırakıldı!");
     }
-*/
+
     if (system_power == true)
     {
         Adan_Bye();
