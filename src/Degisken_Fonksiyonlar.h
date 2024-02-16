@@ -52,7 +52,7 @@ void currentreadfunction()
     if (millis() - currentPreviousMillis >= sensorrefleshtime)
     {
         current_sensor_value = analogRead(currretsensor_PIN);
-        current_sensor_value = (current_sensor_value - 500)/20;
+        //current_sensor_value = (current_sensor_value - 500)/20;
         currentPreviousMillis = millis();
     }
 }
@@ -204,12 +204,12 @@ void Surucu_Fonksiyonlari()
     }
 
     // Eğer akım değerleri riskli durumu aşarsa sistemi kapat
-    if ()
+   /* if ()
     {
 
 
     }
-
+*/
     if (system_power == true)
     {
         Adan_Bye();
