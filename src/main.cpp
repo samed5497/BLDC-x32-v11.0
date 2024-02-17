@@ -70,10 +70,10 @@ void loop()
         currentreadfunction();
         Surucu_Fonksiyonlari();
         Zaman_Guncellemesi();
-        //Sistem_Saat_Guncelleme();
+        // Sistem_Saat_Guncelleme();
         // buttonreadfunction();
         // LCD_report_func();
-        Seriport_Rapor();
+        // Seriport_Rapor();
     }
     if (Kurulum_Modu)
     {

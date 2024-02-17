@@ -52,7 +52,7 @@ void currentreadfunction()
     if (millis() - currentPreviousMillis >= sensorrefleshtime)
     {
         current_sensor_value = analogRead(currretsensor_PIN);
-        //current_sensor_value = (current_sensor_value - 500)/20;
+        current_sensor_value = (current_sensor_value - 570)/20;
         currentPreviousMillis = millis();
     }
 }
@@ -197,7 +197,7 @@ void LCD_report_func()
 void Surucu_Fonksiyonlari()
 {
     // Eğer ısı değerleri riskli seviyeyi aşarsa sistemi kapat
-    if (Tc_A > 100 or Tc_B > 100  or Tc_ort > 80)
+    if (Tc_A > 60 or Tc_B > 60  or Tc_ort > 60)
     {
         system_power = false;
         motor_stoped = false;
