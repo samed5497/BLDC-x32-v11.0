@@ -210,6 +210,11 @@ void Surucu_Fonksiyonlari()
 
     }
 */
+
+
+/*
+ 
+//Electronobs sıralaması
     if (system_power == true)
     {
         Adan_Bye();
@@ -226,6 +231,28 @@ void Surucu_Fonksiyonlari()
         delayMicroseconds(bekleme);
         motor_stoped = false;
     } 
+
+*/
+
+
+//Carl Bugaja sıralaması
+    if (system_power == true)
+    {
+        Adan_Bye();
+        delayMicroseconds(bekleme);
+       // Adan_Cye();
+       // delayMicroseconds(bekleme);
+        Bden_Cye();
+        delayMicroseconds(bekleme);
+       // Bden_Aya();
+       // delayMicroseconds(bekleme);
+        Cden_Aya();
+        delayMicroseconds(bekleme);
+       // Cden_Bye();
+       // delayMicroseconds(bekleme);
+        motor_stoped = false;
+    } 
+
     else {
         if (motor_stoped == false) {
             Motor_STOP(M_A_KAN_PIN);
