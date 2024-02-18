@@ -262,6 +262,39 @@ void temperaturesfunction()
     }
 }
 
+void Birinci_Durum()
+{
+    Motor_PWM(M_A_HIN_PIN, M_A_KAN_PIN, Motor_resolotion, frekans, duty);
+    digitalWrite(M_A_LIN_PIN, HIGH);
+
+    Motor_STOP(M_C_KAN_PIN);
+    digitalWrite(M_C_LIN_PIN, LOW);
+}
+
+void Ikinci_Durum()
+{
+    Motor_PWM(M_B_HIN_PIN, M_B_KAN_PIN, Motor_resolotion, frekans, duty);
+    digitalWrite(M_B_LIN_PIN, HIGH);
+}
+
+void Ucuncu_Durum()
+{
+    Motor_STOP(M_A_KAN_PIN);
+    digitalWrite(M_A_LIN_PIN, LOW);
+
+    Motor_PWM(M_C_HIN_PIN, M_C_KAN_PIN, Motor_resolotion, frekans, duty);
+    digitalWrite(M_C_LIN_PIN, HIGH);
+}
+
+void Dorduncu_Durum()
+{ 
+    Motor_STOP(M_B_KAN_PIN);
+    digitalWrite(M_B_LIN_PIN, LOW);
+}
+
+
+
+
 void Adan_Bye()
 {
     Motor_STOP(M_C_KAN_PIN);

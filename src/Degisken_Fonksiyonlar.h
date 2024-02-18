@@ -235,21 +235,21 @@ void Surucu_Fonksiyonlari()
 */
 
 
-//Carl Bugaja sıralaması
+//Drone sıralaması
     if (system_power == true)
     {
-        Adan_Bye();
+        Birinci_Durum();
         delayMicroseconds(bekleme);
-       // Adan_Cye();
-       // delayMicroseconds(bekleme);
-        Bden_Cye();
+ 
+        Ikinci_Durum();
         delayMicroseconds(bekleme);
-       // Bden_Aya();
-       // delayMicroseconds(bekleme);
-        Cden_Aya();
+
+        Ucuncu_Durum();
         delayMicroseconds(bekleme);
-       // Cden_Bye();
-       // delayMicroseconds(bekleme);
+
+        Dorduncu_Durum();
+        delayMicroseconds(bekleme);
+
         motor_stoped = false;
     } 
 
