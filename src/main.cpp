@@ -19,23 +19,9 @@ void Baslatma_Fonksiyonlari() // Bootin fonksiyonu
 
 void setup()
 {
-    // pinMode(analog_buton_PIN, INPUT);
+
     pinMode(currretsensor_PIN, INPUT);
-   // pinMode(currretsensor_voutPIN, INPUT);
-
-    // pinMode(Encoder_A_PIN, INPUT);
-    // pinMode(Encoder_B_PIN, INPUT);
-    // pinMode(Hall_A_PIN, OUTPUT); // ŞİMDİLİK LEDİ TAKTIK
-    // pinMode(Hall_B_PIN, INPUT);
-    // pinMode(Hall_C_PIN, INPUT);
-    // pinMode(A_sensor_39_PIN, INPUT);
-
     pinMode(octopower_PIN, OUTPUT);
-    /*
-    pinMode(M_A_HIN_PIN, OUTPUT);
-    pinMode(M_B_HIN_PIN, OUTPUT);
-    pinMode(M_C_HIN_PIN, OUTPUT);
-*/
     pinMode(M_A_LIN_PIN, OUTPUT);
     pinMode(M_B_LIN_PIN, OUTPUT);
     pinMode(M_C_LIN_PIN, OUTPUT);
@@ -60,6 +46,16 @@ void setup()
     lcd.print(VERSIYON);
 
     Baslatma_Fonksiyonlari();
+
+/*
+     Motor_STOP(M_A_KAN_PIN);
+      digitalWrite(M_A_LIN_PIN, LOW);
+     Motor_STOP(M_B_KAN_PIN);
+      digitalWrite(M_B_LIN_PIN, LOW);
+     Motor_STOP(M_C_KAN_PIN);
+      digitalWrite(M_C_LIN_PIN, LOW);
+*/
+
 }
 
 void loop()
