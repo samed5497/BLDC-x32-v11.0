@@ -197,7 +197,7 @@ void LCD_report_func()
 void Surucu_Fonksiyonlari()
 {
     // Eğer ısı değerleri riskli seviyeyi aşarsa sistemi kapat
-    if (Tc_A > 60 or Tc_B > 60  or Tc_ort > 60)
+    if (Tc_A > 80 or Tc_B > 80  or Tc_ort > 80)
     {
         system_power = false;
         motor_stoped = false;
@@ -212,7 +212,7 @@ void Surucu_Fonksiyonlari()
 */
 
 
-/*
+
  
 //Electronobs sıralaması
     if (system_power == true)
@@ -232,9 +232,9 @@ void Surucu_Fonksiyonlari()
         motor_stoped = false;
     } 
 
-*/
 
 
+/*
 //Drone sıralaması
     if (system_power == true)
     {
@@ -252,7 +252,7 @@ void Surucu_Fonksiyonlari()
 
         motor_stoped = false;
     } 
-
+*/
     else {
         if (motor_stoped == false) {
             Motor_STOP(M_A_KAN_PIN);
