@@ -20,6 +20,8 @@ void Baslatma_Fonksiyonlari() // Bootin fonksiyonu
 void setup()
 {
 
+
+
     pinMode(currretsensor_PIN, INPUT);
     pinMode(octopower_PIN, OUTPUT);
     pinMode(M_A_LIN_PIN, OUTPUT);
@@ -45,6 +47,8 @@ void setup()
     lcd.setCursor(5, 2);
     lcd.print(VERSIYON);
 
+    ilkakimdegeri = analogRead(currretsensor_PIN);
+
     Baslatma_Fonksiyonlari();
 
 /*
@@ -69,7 +73,7 @@ void loop()
         // Sistem_Saat_Guncelleme();
         // buttonreadfunction();
         // LCD_report_func();
-        //Seriport_Rapor();
+        Seriport_Rapor();
     }
     if (Kurulum_Modu)
     {

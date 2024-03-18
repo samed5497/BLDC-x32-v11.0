@@ -69,10 +69,11 @@ int musade = 200;
 int Motor_resolotion = 8;
 int pin, kanal, Buton;
 int frekans = 10000;
-float duty = 2;
+float duty = 5;
 float duty_artis = 1;
-unsigned int bekleme = 500000;
-unsigned int bekleme_artis = 10000;
+unsigned int bekleme = 20000;
+unsigned int bekleme_artis = 1000;
+int ilkakimdegeri; 
 
 int DONGU, current_sensor_value,current_sensor_value_vout = 0;
 bool system_power = false;

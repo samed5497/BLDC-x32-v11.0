@@ -52,7 +52,7 @@ void currentreadfunction()
     if (millis() - currentPreviousMillis >= sensorrefleshtime)
     {
         current_sensor_value = analogRead(currretsensor_PIN);
-        current_sensor_value = (current_sensor_value - 570)/20;
+        current_sensor_value = (current_sensor_value - ilkakimdegeri)/20;
         currentPreviousMillis = millis();
     }
 }
